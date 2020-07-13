@@ -19,6 +19,7 @@ const Todo = () => {
   useEffect(() => {
     const itemsStorage = localStorage.getItem('items');
     const items = itemsStorage ? JSON.parse(itemsStorage) : [];
+    setItems(items);
   }, []);
 
   useEffect(() => {
