@@ -17,8 +17,7 @@ const Todo = () => {
   const [filteredItems, setFilter] = useState(initialState.filteredItems);
 
   useEffect(() => {
-    const items = localStorage.getItem('items');
-    setItems(JSON.parse(items));
+    const items = JSON.parse(localStorage.getItem('items')) || []
   }, []);
 
   useEffect(() => {
